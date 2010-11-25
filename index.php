@@ -21,7 +21,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
-    
+
+require('config.php');
 require('simplediff/class.simplediff.php');
 
 $gistId = null;
@@ -214,7 +215,20 @@ hr { background: none; border: none; border-top: 2px dotted #000; color: #fff; }
       </tr>
     <?php endforeach; ?>
     </table>
-    <p><a href="http://github.com/rocketeerbkw/gistpad">Source Code Available!</a></p>   
+    <p><a href="http://github.com/rocketeerbkw/gistpad">Source Code Available!</a></p>
+    
+    <script type="text/javascript">
+      // Google Analytics
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '<?php echo $googleAnalyticsCode ?>']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+      })();
+    </script>
   </body>
 </html>
 
