@@ -79,7 +79,7 @@ if (isset($_REQUEST['gist'])) {
       //var_dump($matches);
       $files = array();
       foreach ($matches[2] as $index => $file) {
-        $files[$file] = 'https://gist.github.com/raw/' . $gistId . '/' . $matches[1][$index] . '/' . $file;
+        $files[$file] = 'https://raw.github.com/gist/' . $gistId . '/' . $matches[1][$index] . '/' . $file;
       }
       
       $revisions[$rev]['files'] = $files;
