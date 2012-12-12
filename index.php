@@ -157,6 +157,7 @@ hr { background: none; border: none; border-top: 2px dotted #000; color: #fff; }
 </style>
   </head>
   <body>
+    <p>Github has <a href="https://github.com/blog/1276-welcome-to-a-new-gist">revamped their Gists</a> and this functionality is now baked in. As a result of the rewrite, this app doesn't work anymore. It will be taken down eventually.</p>
     <form method="post">
       <label for="gist">Gist:</label> <input type="text" name="gist" id="gist" value="<?= $gistId ? $gistId : $_REQUEST['gist'] ?>" /> <input type="submit" name="go" id="go" value="Go!" />
     </form>
